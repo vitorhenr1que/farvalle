@@ -21,10 +21,7 @@ export const metadata: Metadata = {
   description: "Website Faculdade Regional do Valle",
 };
 
-export const meta: Metadata = {
-  title:"viewport",
-  description: "width=device-width, initial-scale=1"
-}
+
 
 export default function RootLayout({
   children,
