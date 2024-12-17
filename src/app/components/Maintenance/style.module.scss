@@ -1,0 +1,25 @@
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100vh;
+    gap: 2rem;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+.imageContainer{
+    width: 300px;
+    .logo{
+        width: 100%;
+        height: 100%;
+    }
+}
+.imgFarvalle{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+}

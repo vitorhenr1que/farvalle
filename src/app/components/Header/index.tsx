@@ -8,7 +8,6 @@ export function Header(){
                 <div className={styles.logoContainer}>
                     <Image className={styles.logo} src={logo} alt='Farvalle Logo'/>
                 </div>
-                <button type="button" className="btn btn-primary">Primary</button>
                 <ul className={`${styles.ul} dropdown-menu`} id='navbarNavDropdown'>
                     <li className={`${styles.menuLink} nav-item`}>Inicio</li>
                     <li className={`${styles.menuLink} nav-item`}>Cursos</li>
