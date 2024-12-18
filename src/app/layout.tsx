@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
-import Head from "next/head";
-import Script from "next/script";
-import Link from "next/link";
-
-
+import {Poppins} from 'next/font/google'
+import {Montserrat} from 'next/font/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,10 +15,27 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const poppins = Poppins({
+  weight: ['300','400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins'
+})
+
+const montserrat = Montserrat({
+  weight: ['300','400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat'
+})
+
 export const metadata: Metadata = {
   title: "Farvalle",
   description: "Website Faculdade Regional do Valle",
 };
+
 
 
 
@@ -32,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable}`}>
         {children}
         
       </body>

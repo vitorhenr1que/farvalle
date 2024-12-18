@@ -4,6 +4,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    font-family: var(--font-montserrat);
+    font-weight: 400;
     .container{
         width: 80%;
         display: flex;
@@ -26,6 +28,13 @@
             gap: 1rem;
             border: none;
             background: none;
+            .link{
+                transition: .2s;
+                color: black;
+                &:hover{
+                    color: var(--farvalle-orange)
+                }
+            }
         }
     }
 }

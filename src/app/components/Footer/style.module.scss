@@ -1,0 +1,29 @@
+.container{
+    height: 400px;
+    background: #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--font-montserrat);
+    gap: 2rem;
+    color: white;
+    .iconsContainer{
+        display: flex;
+        gap: 1.5rem;
+        .iconCircle{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .ul{
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+    }
+}

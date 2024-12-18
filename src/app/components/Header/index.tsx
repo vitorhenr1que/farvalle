@@ -1,6 +1,7 @@
 import styles from './style.module.scss'
 import logo from '../../../../public/farvalle-logo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 export function Header(){
     return(
         <nav className={styles.nav}>
@@ -9,12 +10,12 @@ export function Header(){
                     <Image className={styles.logo} src={logo} alt='Farvalle Logo'/>
                 </div>
                 <ul className={`${styles.ul} dropdown-menu`} id='navbarNavDropdown'>
-                    <li className={`${styles.menuLink} nav-item`}>Inicio</li>
-                    <li className={`${styles.menuLink} nav-item`}>Cursos</li>
-                    <li className={`${styles.menuLink} nav-item`}>Processo Seletivo</li>
-                    <li className={`${styles.menuLink} nav-item`}>Trabalhe Conosco</li>
-                    <li className={`${styles.menuLink} nav-item`}>Contato</li>
-                    <li className={`${styles.menuLink} nav-item`}>Sobre</li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Inicio</Link></li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Cursos</Link></li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Processo Seletivo</Link></li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Trabalhe Conosco</Link></li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Contato</Link></li>
+                    <li className={`${styles.menuLink} nav-item`}><Link className={styles.link} href={""}>Sobre</Link></li>
                 </ul>
             </div>
         </nav>

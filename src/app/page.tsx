@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 import { Maintenance } from "./components/Maintenance";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   const isProduction = process.env.NEXT_PUBLIC_VERSION === "production"
@@ -10,6 +11,7 @@ export default function Home() {
     <div className={styles.page}>
      <Header/>
      <Main/>
+     <Footer/>
     </div>
   ) : (
     <Maintenance/>

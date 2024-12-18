@@ -18,7 +18,19 @@ const nextConfig: NextConfig = {
         {
           protocol: 'https',
           hostname: 'www.motivabolsas.com.br'
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.souenfermagem.com.br'
+    },
+    {
+      protocol: 'https',
+      hostname: 'www.contabilizei.com.br'
+  },
+  {
+    protocol: 'https',
+    hostname: 'teloseducacional.com.br'
+},
     ]
 },
 async headers(){
