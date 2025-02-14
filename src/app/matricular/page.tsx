@@ -22,7 +22,7 @@ export default function Matricular(){
 
     const date = new Date()
     const actualDate = date.toLocaleString('pt-BR', {year: 'numeric'})
-    const Editor = dynamic(() => import("@tinymce/tinymce-react").then(mod => mod.Editor), { ssr: false });
+
 
     function verifyEmail(email: FormDataEntryValue){
         const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
