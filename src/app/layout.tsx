@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import "./globals.scss";
 import {Poppins} from 'next/font/google'
 import {Montserrat} from 'next/font/google'
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Maintenance } from "./components/Maintenance";
+import { FooterTwo } from "./components/FooterTwo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,12 +48,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
+    const isProduction = process.env.NEXT_PUBLIC_VERSION === "production"
+    return isProduction ? (
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable}`}>
-        {children}
-        
+          <Header/>
+          {children}
+          {/* <Footer/> */}
+          <FooterTwo/>
       </body>
     </html>
-  );
+  ) : (
+    <html lang="pt-BR">
+    <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable}`}>
+        {children}
+    </body>
+  </html>
+  )
 }

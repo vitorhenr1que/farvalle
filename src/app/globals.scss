@@ -1,9 +1,13 @@
 :root {
+  --white: #fff
   --background: #ffffff;
   --foreground: #171717;
   --farvalle-green: #3f4c41;
   --farvalle-green-hover: #596b5c;
   --farvalle-orange: #a15f40;
+  --farvalle-orange-hover: #b26846;
+  --farvalle-background-disabled: #d5d5d5;
+  --farvalle-color-disabled: #969696;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,11 +35,16 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-montserrat);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.ql-editor{
+  min-height: 200px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -8,6 +8,7 @@
     font-family: var(--font-montserrat);
     gap: 2rem;
     color: white;
+    margin-top: 3rem;
     .iconsContainer{
         display: flex;
         gap: 1.5rem;
@@ -23,7 +24,16 @@
     }
     .ul{
         display: flex;
+        
         list-style: none;
         gap: 1.5rem;
+    }
+}
+
+@media(max-width: 658px){
+    .container{
+        .ul{
+            flex-direction: column;
+        }
     }
 }

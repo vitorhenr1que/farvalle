@@ -1,0 +1,110 @@
+.container{
+ 
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    gap: 3rem;
+    .contactUsContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 1rem;
+        p{
+            text-align: justify;
+        }
+        .infoContainer{
+            margin-top: 1rem;
+            display: flex;
+    
+            flex-direction: column;
+            gap: 1rem;
+    
+            .infoItem{
+                display: flex;
+                align-items: center;
+                gap: .7rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 1.3rem;
+        .spaceFormDiv{
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            label{
+                font-weight: 600;
+            }
+            .nomeDiv{
+                display: flex;
+                gap: 1rem;
+                input{
+                    width: 100%;
+                    padding: 12px 16px;
+                    border: solid 1px #b8b7b7;
+                    border-radius: 4px;
+                }
+            }
+            .inputDiv{
+                display: flex;
+                flex-direction: column;
+                input{
+                    padding: 12px 16px;
+                    border: solid 1px #b8b7b7;
+                    border-radius: 4px;
+                }
+                textarea{
+                    padding: 12px 16px;
+                    border: solid 1px #b8b7b7;
+                    border-radius: 4px;
+                }
+            }
+        }
+        .submitButton{
+            width: 40%;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 500;
+            background: var(--farvalle-green);
+            transition: .2s;
+            cursor: pointer;
+            &:hover{
+                background: var(--farvalle-green-hover);
+            }
+        }
+        .submitButtonDisabled{
+            width: 40%;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 50px;
+            color: var(--farvalle-color-disabled);
+            font-weight: 500;
+            background: var(--farvalle-background-disabled);
+            transition: .2s;
+
+        }
+    }
+}
+
+@media(max-width: 700px){
+    .container{
+        flex-direction: column;
+        .formContainer{
+            .submitButton{
+                width: 100%;
+            }
+            .submitButtonDisabled{
+                width: 100%;
+            }
+        }
+    }
+}
+

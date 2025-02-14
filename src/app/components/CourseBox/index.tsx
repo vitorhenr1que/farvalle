@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import Link from 'next/link'
 
 interface CouseBoxProps{
     course: string,
     modality: string,
     total_semestre: string,
-    image_url: string
+    image_url: string,
+    url: string
 }
 
-export function CourseBox({course, modality, total_semestre, image_url}: CouseBoxProps){
+export function CourseBox({course, modality, total_semestre, image_url, url}: CouseBoxProps){
     return (
         <div className={styles.courseBox}>
                         <div className={styles.flexBoxContainer}>
@@ -23,7 +25,7 @@ export function CourseBox({course, modality, total_semestre, image_url}: CouseBo
                             </div>
                             <Image className={styles.courseImage} src={image_url} alt="" width={120} height={120}/>
                         </div>
-                        <button className={styles.buttonMore}>SAIBA MAIS</button>
+                        <Link href={url} className={styles.buttonMore}>SAIBA MAIS</Link>
                     </div>
     )
 }

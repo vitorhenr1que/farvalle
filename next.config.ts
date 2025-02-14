@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
+import { hostname } from "os";
 
 const nextConfig: NextConfig = {
+   
   images: {
     remotePatterns: [
         {
@@ -31,6 +33,8 @@ const nextConfig: NextConfig = {
     protocol: 'https',
     hostname: 'teloseducacional.com.br'
 },
+    {protocol: 'https',
+    hostname: 'static.wixstatic.com'}
     ]
 },
 async headers(){

@@ -77,11 +77,11 @@
                     }
                 }
                 .buttonMore{
+
                     background: var(--farvalle-green);
                     color: white;
                     border-radius: 8px;
                     padding: 12px 24px;
-                    cursor: pointer;
                     transition: .2s;
                     border: none;
                     &:hover {
@@ -96,3 +96,34 @@
         background: white;
     }
 }
+
+@media(max-width: 762px){
+    .container{
+        .textContainer{
+            flex-direction: column;
+            gap: 2rem;
+            .paragraphContainer{
+                width: 100%;
+                h3{
+                    font-size: 1.4rem;
+                }
+            }
+            .imgPredio{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+        .coursesContainer{
+            height: 100%;
+            padding: 1rem;
+            .courseBoxContainer{
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+

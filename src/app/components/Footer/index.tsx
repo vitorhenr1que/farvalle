@@ -9,16 +9,16 @@ export function Footer(){
     return (
         <div className={styles.container}>
             <div className={styles.iconsContainer}>
-                <Link href={""} className={styles.iconCircle}>
+                <Link href={"https://api.whatsapp.com/send/?phone=5575988708022&text&type=phone_number&app_absent=0"} target='_blank' className={styles.iconCircle}>
                     <IoLogoWhatsapp size={24} color='#3f3f3f'/>
                 </Link>
-                <Link href={""} className={styles.iconCircle}>
+                <Link href={"https://www.instagram.com/farvalle/"} target='_blank' className={styles.iconCircle}>
                     <FaInstagram size={24} color='#3f3f3f'/>
                 </Link>
-                <Link href={""} className={styles.iconCircle}>
+                <Link href={"/"} target='_blank' className={styles.iconCircle}>
                     <FaFacebook size={24} color='#3f3f3f'/>
                 </Link>
-                <Link href={""} className={styles.iconCircle}>
+                <Link href={"/"} target='_blank' className={styles.iconCircle}>
                     <FaYoutube size={24} color='#3f3f3f'/>
                 </Link>
             </div>
@@ -29,7 +29,7 @@ export function Footer(){
                 <li>Contato</li>
                 <li>Trabalhe conosco</li>
             </ul>
-            <span>© 2024 por <strong>FARVALLE</strong></span>
+            <span>© 2025 por <strong>FARVALLE</strong></span>
         </div>
     )
 }

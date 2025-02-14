@@ -1,20 +1,37 @@
 .nav{
     height: 80px;
-    background: lightgray;
+    background: #d3d3d3;
+    //background: white;
     width: 100%;
     display: flex;
     justify-content: center;
     font-family: var(--font-montserrat);
     font-weight: 400;
+
     .container{
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .toggleMenu{
+            cursor: pointer;
+            background: none;
+            border: solid 1px var(--farvalle-green);
+            border-radius: 4px;
+            display: none;
+            color: var(--farvalle-green);
+            margin-right: 10px;
+        }
         .logoContainer{
             width: 200px;
             height: 80px;
             .logo{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+            .logoIcon{
+                display: none;
                 object-fit: contain;
                 width: 100%;
                 height: 100%;
@@ -28,11 +45,318 @@
             gap: 1rem;
             border: none;
             background: none;
+            align-items: center;
             .link{
                 transition: .2s;
                 color: black;
+                font-size: 14px;
                 &:hover{
                     color: var(--farvalle-orange)
+                }
+            }
+            .linkShow{
+                transition: .2s;
+                color: black;
+                font-size: 14px;
+                &:hover{
+                    color: var(--farvalle-orange)
+                }
+            }
+            .linkSystem{
+                background: white;
+                padding: 8px 24px;
+                border-radius: 50px;
+                transition: .2s;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: .3rem;
+                
+                &:hover{
+                    background: #ececec;
+                }
+            }
+            .linkSignUp{
+                background: var(--farvalle-green);
+                padding: 12px 24px;
+                border-radius: 50px;
+                color: white;
+                transition: .2s;
+                font-size: 14px;
+                display: flex;
+                &:hover{
+                    background: var(--farvalle-green-hover);
+                }
+            }
+            .dropDownButton{
+                position: relative;
+                font-size: 1rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 14px;
+                &:hover{
+                    color: var(--farvalle-orange);
+                }
+                .dropDownMenu{
+                    position: absolute;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    background: #efefef;
+                    margin-top: 12px;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                    width: 250px;
+                    font-size: 14px;
+                    z-index: 1;
+                    .dropDownItem{
+                        padding: 16px 24px;
+                        cursor: pointer;
+                        display: block;
+                        color: black;
+                        text-align: start;
+                        border-radius: 4px;
+                        &:hover{
+                            background: #e0e0e0;
+                            flex: 1;
+                        }
+                    }
+                }
+                .dropDownMenuOff{
+                    display: none;
+                    position: absolute;
+                    list-style: none;
+                    flex-direction: column;
+                    background: #efefef;
+                    margin-top: 4px;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                    .dropDownItem{
+                        padding: 16px 24px;
+                        cursor: pointer;
+                        display: block;
+                        border-radius: 4px;
+                        &:hover{
+                            background: #e0e0e0;
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+            .dropDownButtonShow{
+                display: flex;
+            }
+            .menuLinkHr{
+                display: flex;
+                flex-direction: column;
+                hr{
+                    height: 30px;
+                    border: solid .3px rgb(162, 162, 162);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1068px){
+    .nav{
+        .container{
+            .ul{
+               .link, .dropDownButton{
+                display: none;
+               }
+            }
+            .toggleMenu{
+                cursor: pointer;
+                background: none;
+                border: solid 1px var(--farvalle-green);
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--farvalle-green);
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width: 851px){
+    .nav{
+        .container{
+            .ul{
+               .link, .dropDownButton{
+                display: none;
+               }
+               .linkSignUp{
+                padding: 10px 20px;
+                font-size: 12px;
+               }
+               .linkSystem{
+                padding: 10px 20px;
+                font-size: 12px;
+                .icon{
+                    height: 16px;
+                }
+               }
+            }
+            .logoContainer{
+                width: 180px;
+                height: 80px;
+                .logo{
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 762px){
+    .nav{
+        .container{
+            .ul{
+               .link, .dropDownButton{
+                display: none;
+               }
+               .linkSignUp{
+                padding: 10px 20px;
+                font-size: 12px;
+               }
+               .linkSystem{
+                padding: 10px 20px;
+                font-size: 12px;
+                .icon{
+                    height: 16px;
+                }
+               }
+               .menuLinkHr{
+                display: none;
+               }
+            }
+            .logoContainer{
+                width: 40px;
+                height: 80px;
+                .logo{
+                    display: none;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+                .logoIcon{
+                    display: block;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 565px){
+    .nav{
+        .container{
+            width: 100%;
+            padding: 1rem;
+            align-items: center;
+            .ul{
+                gap: 0;
+                justify-content: space-between;
+                align-items: center;
+               .link, .dropDownButton{
+                display: none;
+                
+               }
+               .linkSignUp{
+                padding: 11.5px 18px;
+                font-size: 8px;
+
+               }
+               .linkSystem{
+                padding: 10px 8px;
+                font-size: 8px;
+                gap: 0;
+                .icon{
+                    height: 12px;
+                }
+               }
+               .menuLinkHr{
+                display: none;
+               }
+            }
+            .logoContainer{
+                width: 40px;
+                height: 32px;
+                margin-left: .7rem;
+                .logo{
+                    display: none;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+                .logoIcon{
+                    display: block;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 340px){
+    .nav{
+        .container{
+            width: 100%;
+            padding: 1rem;
+            align-items: center;
+            .ul{
+                gap: 0;
+                justify-content: space-between;
+                align-items: center;
+               .link, .dropDownButton{
+                display: none;
+                
+               }
+               .linkSignUp{
+                padding: 11.5px 18px;
+                font-size: 8px;
+
+               }
+               .linkSystem{
+                padding: 10px 8px;
+                font-size: 8px;
+                gap: 0;
+                .icon{
+                    height: 12px;
+                }
+               }
+               .menuLinkHr{
+                display: none;
+               }
+            }
+            .toggleMenu{
+                margin-right: 3px;
+            }
+            .logoContainer{
+                width: 40px;
+                height: 32px;
+                margin-left: 0rem;
+                .logo{
+                    display: none;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+                .logoIcon{
+                    display: block;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }

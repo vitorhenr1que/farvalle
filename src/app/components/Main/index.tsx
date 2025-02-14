@@ -3,6 +3,7 @@ import { Carousel } from "./Carousel";
 import styles from './style.module.scss'
 import predioFarvalle from '../../../../public/predio.webp'
 import { CourseBox } from "../CourseBox";
+import { BlogMain } from "../BlogMain";
 export function Main(){
     return(
         <>
@@ -22,26 +23,30 @@ export function Main(){
         </div>
             <div className={styles.coursesContainer}>
                 <div className={styles.courseBoxContainer}>
-                    <CourseBox 
+                        <CourseBox 
                         course="BACHARELADO EM ENFERMAGEM" 
                         image_url="https://www.souenfermagem.com.br/wp-content/uploads/2023/04/O-papel-do-enfermeiro-na-sociedade-atual-reflexoes-para-a-Semana-da-Enfermagem-_1_.webp" 
                         modality="Presencial" 
-                        total_semestre="10" />
+                        total_semestre="10"
+                        url="/cursos/enfermagem" />
                         <CourseBox 
                         course="BACHARELADO EM FISIOTERAPIA" 
                         image_url="https://www.contabilizei.com.br/contabilidade-online/wp-content/uploads/2022/11/fisioterapeuta-autonomo.png" 
                         modality="Presencial" 
-                        total_semestre="10" />
+                        total_semestre="10" 
+                        url="/cursos/fisioterapia"/>
                         <CourseBox 
-                        course="BACHARELADO EM PEDAGOGIA" 
+                        course="LICENCIATURA EM PEDAGOGIA" 
                         image_url="https://teloseducacional.com.br/wp-content/uploads/2023/11/1-4.png" 
                         modality="Presencial" 
-                        total_semestre="8" />
+                        total_semestre="8" 
+                        url="/cursos/pedagogia"/>
                 </div>
             </div>
             {/* <div className={styles.blank}>
 
             </div> */}
+            <BlogMain/>
         </div>
         
         

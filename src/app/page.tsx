@@ -9,9 +9,7 @@ export default function Home() {
   const isProduction = process.env.NEXT_PUBLIC_VERSION === "production"
   return isProduction ? (
     <div className={styles.page}>
-     <Header/>
      <Main/>
-     <Footer/>
     </div>
   ) : (
     <Maintenance/>
