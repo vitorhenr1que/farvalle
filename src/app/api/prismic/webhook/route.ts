@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { revalidateTag } from "next/cache";
 
-export async function POST(req: Request) {
+export async function GET(req: Request) {
   // Verifica o token de segurança enviado pelo webhook do Prismic
   const secret = req.headers.get("x-prismic-secret");
   if (secret !== process.env.PRISMIC_ACCESS_TOKEN) {
