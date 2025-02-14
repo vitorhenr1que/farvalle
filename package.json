@@ -25,22 +25,22 @@
     "react-icons": "^5.4.0",
     "react-input-mask": "^2.0.4",
     "react-quill": "^2.0.0",
+    "react-quill-new": "^3.3.3",
     "sass": "^1.85.0",
-    "sass-loader": "^16.0.4",
-    "react-quill-new": "^3.3.3"
+    "sass-loader": "^16.0.4"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.61",
-    "@types/node": "^20",
+    "@types/node": "^20.17.19",
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^19",
+    "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
     "@types/react-input-mask": "^3.0.6",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
     "prisma": "^6.2.1",
     "slice-machine-ui": "^2.11.1",
-    "typescript": "^5",
+    "typescript": "^5.7.3",
     "webpack": "^5.98.0"
   }
 }
