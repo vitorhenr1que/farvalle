@@ -1,27 +1,46 @@
+'use client'
 import { PrismicLink, PrismicRichText } from "@prismicio/react"
 import styles from './style.module.scss'
 import { useRouter } from 'next/router'
 import { getClient } from "@/app/services/prismic"
 import Image from "next/image"
 import { PostsDocumentData, Simplify } from "../../../../prismicio-types"
+import { use, useEffect, useState } from "react"
+import { Loading } from "@/app/components/Loading"
+import { LoadingDiv } from "@/app/components/LoadingDiv"
+
 interface ParamsProps {
-    params: {
-        id: string
-    }
+    params: Promise<{id: string}>
 }
+
 type postType = Simplify<PostsDocumentData>
-export default async function PostsDinamicos({params}: ParamsProps){
-    const {id} = params
-    const client = getClient()
-     const response = await client.getByUID('posts', id, {})
-     const post = response.data
-    return (
+export default function PostsDinamicos({params}: ParamsProps){
+    
+    const [post, setPost] = useState<Simplify<PostsDocumentData>>()
+    const [loading, setLoading] = useState(false)
+    const {id} = use(params)
+     useEffect(() => {
+        async function getPost(){
+            try{
+                setLoading(true)
+                const client = getClient()
+                const response = await client.getByUID('posts', id, {})
+                setPost(response.data)
+                setLoading(false)
+            }catch(e){
+                console.log(e)
+                setLoading(false)
+            }
+        }
+        getPost()
+     },[])
+    return !loading ? (
         <>
         <div className={styles.container}>
           <main className={`${styles.postContainer} container`}>
         
-        <h1 className={styles.title}>{post.title}</h1>
-        <PrismicRichText field={post.content} components={
+        <h1 className={styles.title}>{post?.title}</h1>
+        <PrismicRichText field={post?.content} components={
             {
                 heading1: ({children}) => <p className={styles.headingOne}>{children}</p>,
                 heading2: ({children}) => <p className={styles.headingTwo}>{children}</p>,
@@ -47,5 +66,5 @@ export default async function PostsDinamicos({params}: ParamsProps){
         </div>
         </>
         
-    )
+    ) : (<LoadingDiv/>)
 }
