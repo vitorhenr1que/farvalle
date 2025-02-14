@@ -85,7 +85,7 @@
                 display: flex;
                 align-items: center;
                 gap: .3rem;
-                
+                color: #000;
                 &:hover{
                     background: #ececec;
                 }
@@ -111,6 +111,7 @@
                 cursor: pointer;
                 font-size: 14px;
                 width: 100%;
+                color: #000;
                 &:hover{
                     color: var(--farvalle-orange);
                 }
