@@ -31,16 +31,13 @@
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.61",
-    "@types/node": "^22.13.4",
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
     "@types/react-input-mask": "^3.0.6",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
     "prisma": "^6.2.1",
     "slice-machine-ui": "^2.11.1",
-    "typescript": "^5.7.3",
     "webpack": "^5.98.0"
   }
 }
