@@ -2,11 +2,8 @@
 import Image from 'next/image'
 import styles from './style.module.scss'
 import { PostContainer } from './PostContainer'
-import { getClient } from '@/app/services/prismic'
-import { PostsDocument, PostsDocumentData } from '../../../../prismicio-types'
+import { getClient } from '../../services/prismic'
 
-
-import { LoadingDiv } from '../LoadingDiv'
 export async function BlogMain(){
     
 

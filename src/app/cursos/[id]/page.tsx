@@ -1,15 +1,15 @@
 'use client'
 import styles from './style.module.scss'
 import Image from "next/image";
-import PhoneInput from "@/app/components/PhoneInput";
+import PhoneInput from "../../components/PhoneInput";
 import { IoMdTime, IoMdTimer } from "react-icons/io";
 import { FormEvent, useEffect, useState, use } from "react";
 import Link from "next/link";
 import MotivaBolsas from '../../../../public/logo-branca.png'
-import { getClient } from "@/app/services/prismic";
+import { getClient } from "../../services/prismic";
 import { PrismicRichText } from "@prismicio/react";
 import { CoursesDocumentData, Simplify } from "../../../../prismicio-types";
-import { Loading } from '@/app/components/Loading';
+import { Loading } from '../../components/Loading';
 
 interface ParamsProps {
     params: Promise<{id: string}>

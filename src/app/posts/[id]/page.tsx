@@ -1,15 +1,9 @@
 
 import { PrismicLink, PrismicRichText } from "@prismicio/react"
 import styles from './style.module.scss'
-import { useRouter } from 'next/router'
-import { getClient } from "@/app/services/prismic"
+import { getClient } from "../../services/prismic"
 import Image from "next/image"
 import { PostsDocumentData, Simplify } from "../../../../prismicio-types"
-
-import { Loading } from "@/app/components/Loading"
-import { LoadingDiv } from "@/app/components/LoadingDiv"
-import { InferGetStaticPropsType, GetStaticProps, GetStaticPaths } from "next"
-
 
 interface ParamsProps {
     params: Promise<{id: string}>
