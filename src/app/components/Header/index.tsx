@@ -53,7 +53,7 @@ export function Header(){
                     </button></li>
                     <li className={`${styles.menuLink} nav-item`}>
                     <button className={styles.dropDownButton} onClick={() => handleDropDownMenuClick(2)}>
-                        CURSOS
+                        GRADUAÇÃO
                         <ul className={toggle === 2 ? styles.dropDownMenu : styles.dropDownMenuOff}>
                             <li className={styles.dropDownItem} onClick={() => handleDropDownItemClick('/cursos/enfermagem')}>ENFERMAGEM</li>
                             <li className={styles.dropDownItem} onClick={() => handleDropDownItemClick('/cursos/fisioterapia')}>FISIOTERAPIA</li>
