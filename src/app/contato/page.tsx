@@ -80,7 +80,7 @@ export default function Contato(){
                     </div>
                     <div className={styles.infoItem}>
                         <BsGeoAlt size={20} color='#a15f40'/>
-                        <span>Rua C, 127, Loteamento Hugo Nogueira, Centro, 45300-000</span> 
+                        <span>Avenida Dr. Luís Sande, 147, Santa Rita, Valle Shopping - Amargosa/BA, 45300-000</span> 
                     </div>
                 </div>
             </div>

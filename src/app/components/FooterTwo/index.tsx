@@ -19,7 +19,7 @@ export function FooterTwo(){
             </div>
             <div className={styles.addressContainer}>
                 <strong>Endereço</strong>
-                <span>Rua C, 127, Loteamento Hugo Nogueira, Centro, 45300-000, Amargosa, BA.</span>
+                <span>Avenida Dr. Luís Sande, 147, Santa Rita, Valle Shopping - Amargosa/BA</span>
                 <div>
                     <span className={styles.email}>{process.env.NEXT_PUBLIC_FARVALLE_MAIL}</span>
                 </div>
